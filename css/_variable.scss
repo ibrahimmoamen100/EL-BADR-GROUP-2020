@@ -1,0 +1,100 @@
+@mixin myBtn($top, $left) {
+	width: 200px;
+	height: 60px;
+	background-color: transparent;
+	border: 1px solid rgb(71, 200, 77);
+	font-size: 16px;
+	font-family: roboto, sans-serif;
+	// font-weight: bold;
+	border-radius: 5%;
+	color: white;
+	position: absolute;
+	top: $top;
+	left: $left;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgb(71, 200, 77);
+		transition: 0.3s ease-in;
+	}
+}
+
+@mixin myButtonsToCart() {
+	padding: 8px 10px;
+	border-radius: 50%;
+	border: 1px solid #6f76af;
+	background: rgb(255, 255, 255);
+	color: #6f76af;
+	position: relative;
+	transition: 0.2s ease-in-out;
+	top: 30px;
+	visibility: hidden;
+	opacity: 0;
+	box-sizing: border-box;
+
+	i {
+		// font-size: 30px;
+	}
+
+	&:hover {
+		transition: 0.3s ease-in-out;
+		background-color: #6f76af;
+		border: 1px solid white;
+		color: white;
+	}
+
+	&:before {
+		width: 100%;
+		height: 100%;
+		padding: 8px 10px;
+		background: rgb(134, 5, 5);
+		position: absolute;
+		transition: 0.3s ease-in-out;
+		top: 20px;
+		left: 10px;
+	}
+}
+
+@mixin myLoadingDiv() {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	margin: 2px;
+	border-radius: 50%;
+	z-index: 5000000000999;
+}
+
+#slider {
+
+	&:hover #carousel_container {
+		visibility: visible;
+		opacity: 1;
+		transition: 0.5s ease-in-out;
+	}
+
+	#carousel_container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		// background-color: red;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.5s ease-in-out;
+
+
+
+		#carousel {
+			width: 35px;
+			height: 8px;
+			border-radius: 30%;
+			background-color: white;
+			opacity: 1;
+		}
+
+		.checked {
+			background-color: red !important;
+		}
+
+	}
+}
