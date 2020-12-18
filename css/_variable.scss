@@ -33,7 +33,10 @@
 	box-sizing: border-box;
 
 	i {
-		// font-size: 30px;
+		font-size: 16px;
+		pointer-events: none;
+		transition: 0.1s ease-in-out;
+
 	}
 
 	&:hover {
@@ -41,6 +44,13 @@
 		background-color: #6f76af;
 		border: 1px solid white;
 		color: white;
+
+		i {
+			// font-size: 20px;
+			pointer-events: none;
+			transition: 0.1s ease-in-out;
+
+		}
 	}
 
 	&:before {
